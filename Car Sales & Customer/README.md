@@ -50,26 +50,29 @@ The data model follows a centralized fact table structure connected to multiple 
 - Efficient DAX calculations  
 
 ### Screenshot
-![Star Schema](images/star_schema.png)
+<img width="1247" height="696" alt="Star_Schema" src="https://github.com/user-attachments/assets/12e77094-e04d-4b71-b06d-26c0db671c16" />
+<br><br>
 
 ---
 
 ## 📋 Project Tables & Transformations
 
 ### Customer Table
-![Customer Table](images/dim_customer.png)
+<img width="1907" height="966" alt="customer" src="https://github.com/user-attachments/assets/129ec5fa-160c-4dfe-bab8-7738552cfbf5" />
+<br><br>
 
 ### Vehicle Table
-![Vehicle Table](images/dim_vehicle.png)
+<img width="1917" height="947" alt="Vehicle" src="https://github.com/user-attachments/assets/db9ff1e3-0433-43ce-a159-e7f791784940" />
+<br><br>
 
 ### Dealer Table
-![Dealer Table](images/dim_dealer.png)
+<img width="1917" height="946" alt="Dealer" src="https://github.com/user-attachments/assets/cab5da83-4068-4022-8f9c-694fa45244b3" />
+<br><br>
 
-### Date Table
-![Date Table](images/dim_date.png)
 
 ### Car Sales Fact Table
-![Car Sales Fact](images/fact_carsales.png)
+<img width="1917" height="952" alt="car sales" src="https://github.com/user-attachments/assets/59af04dc-fb44-46fc-98d4-d40e934673f3" />
+<br><br>
 
 ---
 
@@ -112,8 +115,10 @@ The data model follows a centralized fact table structure connected to multiple 
 
 ```
 
-### Screenshot
-![DAX Formulas](images/dax_formulas.png)
+### DAX Formulas
+<img width="960" height="1093" alt="Gemini_Generated_Image_1f76kj1f76kj1f76" src="https://github.com/user-attachments/assets/18ab886f-16b5-4bdf-95a7-7e791e3bf715" />
+
+<br><br>
 
 ---
 
@@ -121,19 +126,17 @@ The data model follows a centralized fact table structure connected to multiple 
 
 ## 1️⃣ Executive Sales Overview
 Provides a high-level summary of car sales performance.  
-![Executive Overview](images/executive_sales.png)
+<img width="791" height="648" alt="Executive Sales Overview" src="https://github.com/user-attachments/assets/029f024c-26dd-4902-a560-4f66b0eae3be" />
+
 
 ## 2️⃣ Customer Analytics Dashboard
 Focuses on customer demographics, segmentation, and purchasing behavior.  
-![Customer Analysis](images/customer_analysis.png)
+<img width="1127" height="660" alt="Customer Analysis" src="https://github.com/user-attachments/assets/f7f45559-325a-425d-a25f-a34dfef1cbe1" />
+
 
 ## 3️⃣ Vehicle Performance Dashboard
 Evaluates brand-level and model-level performance.  
-![Vehicle Performance](images/vehicle_performance.png)
-
-## 4️⃣ Dealer Contribution Dashboard
-Analyzes dealer-wise sales contribution and regional performance.  
-![Dealer Dashboard](images/dealer_dashboard.png)
+<img width="977" height="637" alt="Vehicle Performance Analysis" src="https://github.com/user-attachments/assets/fcd9741a-b9b6-497d-8bc8-8b68bde13288" />
 
 ---
 
