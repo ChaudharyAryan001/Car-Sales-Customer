@@ -1,0 +1,36 @@
+1. Calculated Columns :
+Month Number = MONTH(Dim_Date[Date])
+Year = YEAR(Dim_Date[Date])
+Month Name = FORMAT(Dim_Date[Date], "MMMM")
+Quarter = "Q" & FORMAT(Dim_Date[Date], "Q")
+Vehicle Category = SWITCH(TRUE(), Dim_Vehicle[Body Style] = "SUV", "SUV", Dim_Vehicle[Body Style] = "Hatchback", "Compact", Dim_Vehicle[Body Style] = "Sedan", "Sedan", "Other")
+Income Group = SWITCH(TRUE(),Dim_Customer[Annual Income] < 300000, "Low Income",Dim_Customer[Annual Income] < 800000, "Middle Income", "High Income")
+
+2. Measures :
+Total Sales = SUM(Fact_CarSales[Sales_Amount])
+Cars Sold = COUNT(Fact_CarSales[Car_id])
+Average Selling Price = AVERAGE(Fact_CarSales[Sales_Amount])
+Total Customers = DISTINCTCOUNT(Fact_CarSales[Customer_key])
+Total Dealers = DISTINCTCOUNT(Fact_CarSales[Dealer_Key])
+Revenue Per Customer = DIVIDE([Total Sales],[Total Customers])
+Revenue Per Dealer = DIVIDE([Total Sales],[Total Dealers])
+Average Sales Per Day = DIVIDE([Total Sales],DISTINCTCOUNT(Dim_Date[Date]))
+Highest Sale = MAX(Fact_CarSales[Sales_Amount])
+Lowest Sale = MIN(Fact_CarSales[Sales_Amount])
+Average Cars Sold Per Dealer = DIVIDE([Cars Sold],[Total Dealers])
+Average Customer Income = AVERAGE(Dim_Customer[Annual Income])
+
+3. Filter Context Function :
+Regional % Sales = DIVIDE([Total Sales], CALCULATE([Total Sales], ALL(Dim_Dealer[Dealer_Region])))
+Market Share % = DIVIDE([Total Sales], CALCULATE([Total Sales], ALL(Dim_Vehicle[Company])))
+Sales Vs Avg Sale = [Average Selling Price] - CALCULATE([Average Selling Price],ALL(Fact_CarSales))
+Running Total Sales = CALCULATE([Total Sales], FILTER(ALL(Dim_Date), Dim_Date[Date] <= MAX(Dim_Date[Date])))
+
+4. Time Intelligence Funcrion :
+Sales YTD = TOTALYTD([Total Sales],Dim_Date[Date])
+Sales QTD = TOTALQTD([Total Sales],Dim_Date[Date])
+Sales MTD = TOTALMTD([Total Sales], Dim_Date[Date])
+
+5. Date Table :
+Dim_Date = CALENDAR(MIN(Fact_CarSales[Date]),MAX(Fact_CarSales[Date]))
+
